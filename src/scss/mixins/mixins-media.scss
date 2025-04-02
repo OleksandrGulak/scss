@@ -1,0 +1,25 @@
+@use '../presets/' as *;
+
+@mixin lg() {
+    @media (width < #{$lg}) {
+        @content;
+    }
+}
+
+@mixin sm() {
+    @media (width < #{$sm}) {
+        @content;
+    }
+}
+
+@mixin lg-sm() {
+    @media (#{$sm} <= width < #{$lg}) {
+        @content;
+    }
+}
+
+@mixin lg-min() {
+    @media (#{$lg} <= width) {
+        @content;
+    }
+}

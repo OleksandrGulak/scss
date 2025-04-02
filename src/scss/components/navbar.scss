@@ -1,0 +1,38 @@
+@use '../presets/' as *;
+@use '../mixins/' as *;
+
+.navbar {
+    @include lg-min() {
+        margin-bottom: 110px;
+    }
+
+    @include lg-sm() {
+        margin-bottom: 70px;
+    }
+
+    @include sm() {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        columns: $gap;
+        margin-left: -1.95em;
+
+        @include sm() {
+            justify-content: center;
+        }
+    }
+    
+    &__link {
+        display: block;
+        padding: 0.5em 1.95em;
+        text-transform: uppercase;
+
+        &--active {
+            color: $color-primary;
+            font-weight: 500;
+        }
+    }
+}

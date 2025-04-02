@@ -1,0 +1,29 @@
+@use '../presets/' as *;
+@use '../mixins/' as *;
+
+.container {
+    width: min(100% - $gap-big, $container-primary);
+    margin-inline: auto;
+}
+
+.container-small {
+    display: flex;
+    flex-direction: column;
+    width: min(100% - $gap-big, $container-secondary);
+    margin-inline: auto;
+    gap: $gap-large;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+    padding: 0px;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    visibility: hidden;
+}

@@ -1,0 +1,9 @@
+@use '../presets/' as *;
+@use '../mixins/' as *;
+
+.process {
+    background-color: $color-gray;
+    padding-top: 97px;
+    padding-bottom: 45px;
+    @include section();
+}

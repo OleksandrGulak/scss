@@ -1,0 +1,38 @@
+@use '../presets/' as *;
+@use '../mixins/' as *;
+
+.experience {
+    background-color: $color-primary;
+    color: $color-white;
+    padding-top: 100px;
+    padding-bottom: 90px;
+
+    &__container {
+        display: flex;
+        gap: $gap-big;
+        flex-wrap: wrap;
+
+        @include lg-min() {
+            justify-content: space-between;
+        }
+
+        @include lg() {
+            justify-content: space-evenly;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: $gap;
+
+        &-image {
+            order: -1;
+        }
+        
+        &-number {
+            font-size: 1.3125rem; /*21px*/
+            font-weight: 500;
+            margin-top: -5px;
+        }
+    } 
+}

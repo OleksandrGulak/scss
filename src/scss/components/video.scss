@@ -1,0 +1,16 @@
+@use '../presets/' as *;
+@use '../mixins/' as *;
+
+.video {
+    background-color: $color-gray;
+    padding-top: 0px;
+    padding-bottom: 90px;
+
+    &__iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border: 0;
+    }
+    
+}
